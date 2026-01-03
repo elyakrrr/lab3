@@ -11,7 +11,14 @@ public class Monolith {
         this.statuette = statuette;
     }
 
-public void influence(Cultist cultist) {
+    public void influence(Cultist cultist) {
+        if (statuette != null) {
+            int randomAmount = Person.random.nextInt(21) + 5;
+            cultist.increaseEnergy(randomAmount);
+            System.out.println(cultist.getName() + " находится под влиянием монолита. Энергия увеличена на " + randomAmount + ".");
+        } else {
+            System.out.println("На монолите нет статуэтки.");
+        }
     }
 
     public float getHeight() {
@@ -27,5 +34,6 @@ public void influence(Cultist cultist) {
     }
 
     public void setStatuette(Statuette statuette) {
+        this.statuette = statuette;
     }
 }

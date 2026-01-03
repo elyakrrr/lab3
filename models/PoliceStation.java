@@ -12,7 +12,9 @@ public class PoliceStation {
         this.cultists = new ArrayList<>();
     }
 
-public void addCultist(Cultist cultist) {
+    public void addCultist(Cultist cultist) {
+        cultists.add(cultist);
+        System.out.println("Культист " + cultist.getName() + " добавлен в участок.");
     }
 
     public List<PoliceOfficer> getPoliceOfficers() {
@@ -20,6 +22,7 @@ public void addCultist(Cultist cultist) {
     }
 
     public void setPoliceOfficers(List<PoliceOfficer> policeOfficers) {
+        this.policeOfficers = policeOfficers;
     }
 
     public List<Cultist> getCultists() {
@@ -27,5 +30,6 @@ public void addCultist(Cultist cultist) {
     }
 
     public void setCultists(List<Cultist> cultists) {
+        this.cultists = cultists;
     }
 }
