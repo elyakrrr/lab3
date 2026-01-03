@@ -9,6 +9,20 @@ public class CultistFactory extends PersonFactory {
     
     public CultistFactory(String rank) {
         this.rank = rank;
+        
+        switch (rank) {
+            case "high":
+                this.baseHp = 70;
+                this.baseEnergy = 60;
+                break;
+            case "medium":
+                this.baseHp = 60;
+                this.baseEnergy = 50;
+                break;
+            default:
+                this.baseHp = 50;
+                this.baseEnergy = 40;
+        }
     }
 
 @Override
