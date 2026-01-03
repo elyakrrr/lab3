@@ -1,6 +1,8 @@
 import factories.CultistFactory;
 import factories.PoliceOfficerFactory;
 import models.*;
+import records.InterrogationResults;
+import records.RaidResults;
 import enums.State;
 
 public class Main {
@@ -45,7 +47,7 @@ public class Main {
         
         RingOfFire ringOfFire = new RingOfFire();
         island.setRingOfFire(ringOfFire);
-      
+        System.out.println("Огненное кольцо создано. Интенсивность: " + ringOfFire.getIntensity());
         
         cultist1.joinRitual(ringOfFire);
         cultist2.joinRitual(ringOfFire);
@@ -55,14 +57,14 @@ public class Main {
         monolith.influence(cultist2);
         
         cultist1.react();
-      
+        System.out.println(cultist1.getName() + " в настроении: " + cultist1.getMood());
         cultist2.react();
-       
+        System.out.println(cultist2.getName() + " в настроении: " + cultist2.getMood());
         
         officer1.witnessRitual();
-        
+        System.out.println(officer1.getName() + " в настроении: " + officer1.getMood());
         officer4.witnessRitual();
-
+        System.out.println(officer4.getName() + " в настроении: " + officer4.getMood());
         
         officer1.arrest(cultist4);
         officer2.arrest(cultist5);
@@ -84,18 +86,17 @@ public class Main {
         Inspector inspector = (Inspector) officer5;
         RaidResults results = inspector.count(island.getCultists());
         
-       
+        System.out.println("Арестовано: " + results.arrested());
+        System.out.println("Убито: " + results.killed());
+        System.out.println("Ранено: " + results.wounded());
+        System.out.println("Сбежало: " + results.escaped());
         
-
-
-  
         Statuette confiscatedStatuette = inspector.take(monolith);
-     
+        System.out.println("Конфискована статуэтка из материала: " + confiscatedStatuette.getMaterial());
         
         InterrogationResults interrogation = inspector.interrogate(cultist2);
-      
-
-
+        System.out.println("Религия культистов: " + interrogation.religion());
+        System.out.println("Цель ритуала: " + interrogation.ritualInfo());
         
         PoliceStation station = new PoliceStation();
         
