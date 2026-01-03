@@ -8,5 +8,9 @@ public class Inspector extends PoliceOfficer {
     }
 
 public Statuette take(Monolith monolith) {
+        Statuette statuette = monolith.getStatuette();
+        monolith.setStatuette(null);
+        System.out.println(getName() + " забирает статуэтку с монолита.");
+        return statuette;
     }
 }
