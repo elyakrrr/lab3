@@ -3,6 +3,7 @@ package models;
 import enums.State;
 import enums.Mood;
 import interfaces.Move;
+import exceptions.NegativeHPException;
 
 public class Cultist extends Person implements Move {
     private State state;
@@ -126,7 +127,7 @@ public class Cultist extends Person implements Move {
         int newHp = hp - amount;
         
         if (newHp < 0) {
- 
+            throw new NegativeHPException("HP не может быть отрицательным!");
         }
         
         hp = newHp;
