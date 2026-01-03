@@ -10,3 +10,9 @@ public class CultistFactory extends PersonFactory {
     public CultistFactory(String rank) {
         this.rank = rank;
     }
+
+@Override
+    public Cultist createPerson(String name, String origin) {
+        return new Cultist(name, origin, rank, baseHp, baseEnergy);
+    }
+}

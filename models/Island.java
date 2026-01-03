@@ -13,4 +13,32 @@ public class Island {
         this.policeOfficers = new ArrayList<>();
         this.cultists = new ArrayList<>();
     }
+
+ public Monolith getMonolith() {
+        return monolith;
+    }
+
+    public void setMonolith(Monolith monolith) {
+    }
+
+    public RingOfFire getRingOfFire() {
+        return ringOfFire;
+    }
+
+    public void setRingOfFire(RingOfFire ringOfFire) {
+    }
+
+    public List<PoliceOfficer> getPoliceOfficers() {
+        return policeOfficers;
+    }
+
+    public void addPoliceOfficer(PoliceOfficer officer) {
+    }
+
+    public List<Cultist> getCultists() {
+        return cultists;
+    }
+
+    public void addCultist(Cultist cultist) {
+    }
 }

@@ -39,5 +39,77 @@ public class Cultist extends Person implements Move {
         this.hp = hp;
         this.isInChain = false;
         this.energy = energy;
+
+ public boolean resist() {     
+    }
+
+    public void joinRitual(RingOfFire ring) {
+    }
+
+    public void tryToEscape() {
+    }
+        
+    public boolean carryWounded(Cultist woundedCultist) {
+    }
+
+    public void increaseEnergy(int amount) {
+    }
+
+    public void decreaseHp(int amount) {
+    }
+    
+    @Override
+    public void react() {
+    }
+
+    @Override
+    public void moveTo(Island island) {
+    }
+
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public boolean isInChain() {
+        return isInChain;
+    }
+
+    public void setInChain(boolean inChain) {
+        isInChain = inChain;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+
+    public int getEscapeBonus() {
+        return escapeBonus;
+    }
+
+    public void setEscapeBonus(int escapeBonus) {
+        this.escapeBonus = escapeBonus;
+    }
+    
+    public boolean isAlive() {
     }
 }

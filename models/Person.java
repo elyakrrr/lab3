@@ -14,4 +14,22 @@ public abstract class Person {
         this.origin = origin;
         this.mood = Mood.CALM;
     }
+
+public abstract void react();
+
+    public String getName() {
+        return name;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
 }

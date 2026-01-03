@@ -1,8 +1,6 @@
 import factories.CultistFactory;
 import factories.PoliceOfficerFactory;
 import models.*;
-import records.InterrogationResults;
-import records.RaidResults;
 import enums.State;
 
 public class Main {
@@ -43,8 +41,17 @@ public class Main {
         
         Statuette statuette = new Statuette("Обсидиан");
         Monolith monolith = new Monolith(3.5f, "Базальт", statuette);
+        island.setMonolith(monolith);
         
         RingOfFire ringOfFire = new RingOfFire();
+        island.setRingOfFire(ringOfFire);
+       
+        cultist1.joinRitual(ringOfFire);
+        cultist2.joinRitual(ringOfFire);
+        cultist3.joinRitual(ringOfFire);
+        
+        monolith.influence(cultist1);
+        monolith.influence(cultist2);
         
         PoliceStation station = new PoliceStation();
     }

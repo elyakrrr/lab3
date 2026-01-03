@@ -10,4 +10,9 @@ public class PoliceOfficerFactory extends PersonFactory {
         this.weaponType = weaponType;
         this.experience = experience;
     }
+
+@Override
+    public PoliceOfficer createPerson(String name, String origin) {
+        return new PoliceOfficer(name, origin, weaponType, experience);
+    }
 }

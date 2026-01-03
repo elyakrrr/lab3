@@ -11,4 +11,21 @@ public class PoliceStation {
         this.policeOfficers = new ArrayList<>();
         this.cultists = new ArrayList<>();
     }
+
+public void addCultist(Cultist cultist) {
+    }
+
+    public List<PoliceOfficer> getPoliceOfficers() {
+        return policeOfficers;
+    }
+
+    public void setPoliceOfficers(List<PoliceOfficer> policeOfficers) {
+    }
+
+    public List<Cultist> getCultists() {
+        return cultists;
+    }
+
+    public void setCultists(List<Cultist> cultists) {
+    }
 }

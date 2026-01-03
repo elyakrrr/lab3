@@ -6,4 +6,8 @@ public class Statuette {
     public Statuette(String material) {
         this.material = material;
     }
+
+ public String getMaterial() {
+        return material;
+    }
 }

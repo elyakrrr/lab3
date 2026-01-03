@@ -10,4 +10,22 @@ public class Monolith {
         this.material = material;
         this.statuette = statuette;
     }
+
+public void influence(Cultist cultist) {
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public Statuette getStatuette() {
+        return statuette;
+    }
+
+    public void setStatuette(Statuette statuette) {
+    }
 }

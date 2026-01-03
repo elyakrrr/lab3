@@ -13,5 +13,36 @@ public class PoliceOfficer extends Person implements Move {
         this.weaponType = weaponType;
         this.experience = experience;
     }
+ 
+ public void witnessRitual() {
+    }
+
+    public void shootAt(Cultist cultist) {
+    }
+
+    public void arrest(Cultist cultist) {
+    }
+
+    public void forceToDress(Cultist cultist) {
+    }
+        
+    public void deliver(Cultist cultist, PoliceStation station) {
+    }
+
+    @Override
+    public void react() {
+    }
+
+    @Override
+    public void moveTo(Island island) {
+    }
+
+    public String getWeaponType() {
+        return weaponType;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
 }
    
